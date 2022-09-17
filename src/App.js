@@ -17,6 +17,9 @@ function App() {
         >
           Learn React
         </a>
+        <input type="text" name="username"></input>
+        <input type="text" name="fathername"></input>
+        <input type="text" name="grandfathername"></input>
       </header>
     </div>
   );
