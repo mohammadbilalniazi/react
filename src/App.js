@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+//import bilal from './'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <input type="text" name="username"></input>
         <input type="text" name="fathername"></input>
         <input type="text" name="grandfathername"></input>
+
       </header>
     </div>
   );
