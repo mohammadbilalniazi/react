@@ -22,8 +22,8 @@ class User extends Component {
         return (
             <div>
                 <p>{this.state.username} {this.state.age} </p>
-                <input type="text" name="age" value={this.state.age} onInput={(e) => this.setState({ age: e.target.value })} placeholder="age" id="age" />
-                <input type="text" name="user_name" onChange={(e) => this.setState({ username: e.target.value })} value={this.state.username} placeholder="user_name" id="user_name" />
+                <input type="text" name="age" onInput={(e) => this.setState({ age: e.target.value })} placeholder="age" id="age" />
+                <input type="text" name="user_name" onChange={(e) => this.setState({ username: e.target.value })} placeholder="user_name" id="user_name" />
             </div>
         );
     }

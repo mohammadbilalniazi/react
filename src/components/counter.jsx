@@ -20,17 +20,17 @@ class Counter extends Component {
     //     this.handle_increment = this.handle_increment.bind(this)
     // }
     renderTags() {
-        //console.log("renderTags this=", this)
+        console.log("renderTags this=", this)
         if (this.state.tags.length === 0) return <p>No Tags</p>;
         return <ul>{this.state.tags.map(tag => <li key={tag}>{tag}</li>)}</ul>;
     }
     handle_increment = () => {
         // console.log("this.state.count=", this.state.count)
-        this.setState({ count: this.props.value + 1 })
+        this.setState({ count: this.state.count + 1 })
     }
     handle_decrement = product => {
         console.log(product)
-        this.setState({ count: this.props.value - 1 })
+        this.setState({ count: this.state.count - 1 })
     }
     render() {
         // let classes = this.get_class_name();
@@ -42,6 +42,7 @@ class Counter extends Component {
 
                 <button style={this.style_obj} onClick={this.handle_increment} className='btn btn-secondary btn-sm'>Increment</button>
                 <button style={this.style_obj} onClick={() => this.handle_decrement(2)}>Decrement</button>
+                <button style={this.style_obj} className='btn btn-danger btn-sm'>Delete</button>
 
                 {/* {this.state.tags.length === 0 && "Please Enter Tag"}
                 {this.renderTags()} */}

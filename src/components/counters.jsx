@@ -7,17 +7,22 @@ class Counters extends Component {
     }
     state = {
         counters: [
-            { id: 1, value: 4, number_user: 0 },
-            { id: 2, value: 4, number_user: 0 },
-            { id: 3, value: 10, number_user: 0 },
-            { id: 4, value: 0, number_user: 0 }
-        ],
-        age: 0,
+            { id: 1, value: 4 },
+            { id: 2, value: 4 },
+            { id: 3, value: 10 },
+            { id: 4, value: 0 }
+        ]
+    }
+
+    handle_delete = () => {
+        alert("delete")
     }
     render() {
         return (
+
             <div>
-                {this.state.counters.map(counter => <Counter id={counter.id} value={counter.value} selected={true} />)}
+                {this.state.counters.map(counter => <Counter id={counter.id} key={counter.id} value={counter.value} selected={true} />
+                )}
                 <User />
 
                 {/* selected to true is default value even if we not put selected={true} */}
