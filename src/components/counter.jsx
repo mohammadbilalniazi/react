@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 class Counter extends Component {
     state = {//object
-        count: 2, //properties
+        count: this.props.value, //properties  prev    count: 2, //properties
+        value: 3,
         status: 2,
         img_url: "https://picsum.photos/200",
-        tags: []
+        tags: [],
+        is_active: false,
     };
     style_obj = {
         fontSize: 15,
@@ -24,14 +26,23 @@ class Counter extends Component {
     }
     handle_increment = () => {
         // console.log("this.state.count=", this.state.count)
-        this.setState({ count: this.state.count + 1 })
+        this.setState({ count: this.props.value + 1 })
+    }
+    handle_decrement = product => {
+        console.log(product)
+        this.setState({ count: this.props.value - 1 })
     }
     render() {
         // let classes = this.get_class_name();
+        console.log("this.props=", this.props)
         return (
             <div>
+                {this.props.children}
                 <span style={this.style_obj} className={this.get_badge_class_name()}>{this.format_count()} </span >
+
                 <button style={this.style_obj} onClick={this.handle_increment} className='btn btn-secondary btn-sm'>Increment</button>
+                <button style={this.style_obj} onClick={() => this.handle_decrement(2)}>Decrement</button>
+
                 {/* {this.state.tags.length === 0 && "Please Enter Tag"}
                 {this.renderTags()} */}
             </div>

@@ -6,7 +6,7 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import registerServiceWorker from './registerServiceWorker'
 import reportWebVitals from './reportWebVitals'
-import Counter from './components/counter'
+import Counters from './components/counters'
 // import reportWebVitals from './reportWebVitals';
 //#####################billal##################
 //import React from 'react';
@@ -15,7 +15,7 @@ import Counter from './components/counter'
 const element = <h1>Bilal Application</h1>
 
 // ReactDOM.render(element, document.getElementById("root"))
-ReactDOM.render(<Counter />, document.getElementById("root"))
+ReactDOM.render(<Counters />, document.getElementById("root"))
 
 
 //console.log(element);
