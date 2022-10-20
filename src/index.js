@@ -12,7 +12,7 @@ import Counters from './components/counters'
 //import React from 'react';
 //import ReactDom from 'react-dom'
 
-const element = <h1>Bilal Application</h1>
+// const element = <h1>Bilal Application</h1>
 
 // ReactDOM.render(element, document.getElementById("root"))
 ReactDOM.render(<Counters />, document.getElementById("root"))
